@@ -1,0 +1,71 @@
+What is SQL?
+SQL (Structured Query Language) is a standard programming language specifically designed for managing and manipulating databases. It is used to communicate with and perform operations on Relational Database Management Systems (RDBMS), which store data in structured formats (like tables with rows and columns).
+
+Why SQL?
+Data Management: SQL allows users to access, retrieve, and manipulate data stored in a relational database. It is essential for working with large datasets in a structured manner.
+
+Standardization: SQL is a widely-adopted standard for relational databases, ensuring compatibility across different RDBMS platforms such as MySQL, PostgreSQL, Oracle, SQL Server, etc.
+
+Efficient Querying: SQL is designed to perform operations on data efficiently, allowing users to filter, sort, group, aggregate, and join large datasets quickly.
+
+Flexibility: It provides a variety of functionalities like data insertion, updates, deletion, data retrieval, and database creation, among others.
+
+Integration: SQL can be integrated with different programming languages (like Python, Java, etc.) and systems to build data-driven applications.
+
+Types of SQL Operations:
+SQL is divided into various categories based on the operations it performs. These categories are:
+
+DDL - Data Definition Language: DDL commands are used to define or modify the structure of a database (e.g., creating, altering, or deleting tables).
+
+CREATE: Used to create a new table, database, or index.
+ALTER: Used to modify an existing table, such as adding or removing columns.
+DROP: Used to delete a table or database.
+TRUNCATE: Used to remove all records from a table (but not the table structure).
+Example:
+
+sql
+Copy code
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+);
+DML - Data Manipulation Language: DML commands are used to manipulate the data within tables. These operations change the actual data stored in the database.
+
+INSERT: Used to add new records to a table.
+UPDATE: Used to modify existing records in a table.
+DELETE: Used to remove records from a table.
+Example:
+
+sql
+Copy code
+INSERT INTO employees (id, name, age)
+VALUES (1, 'John Doe', 28);
+
+UPDATE employees
+SET age = 30
+WHERE id = 1;
+
+DELETE FROM employees
+WHERE id = 1;
+DQL - Data Query Language: DQL is used for querying or retrieving data from the database. The main command under DQL is:
+
+SELECT: Used to query or fetch data from a table based on conditions.
+Example:
+
+sql
+Copy code
+SELECT name, age
+FROM employees
+WHERE age > 25;
+DCL - Data Control Language: DCL commands are used to control access to the database, such as giving or taking away user privileges.
+
+GRANT: Gives a user permission to perform certain actions on the database.
+REVOKE: Removes permissions from a user.
+Example:
+
+sql
+Copy code
+GRANT SELECT, INSERT ON employees TO 'username';
+
+REVOKE INSERT ON employees FROM 'username';

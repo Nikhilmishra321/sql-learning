@@ -31,3 +31,50 @@ VALUES
 ('SHILPA', 'AJAY', 'JOSHI', 31, 27000, 'Pune'),
 ('VINAY', 'HARSH', 'KAPOOR', 25, 18000, 'Hyderabad'),
 ('TARUN', 'RAHUL', 'KHANNA', 34, 33000, 'Jaipur');
+
+
+
+----------------------------------------------------------Days 3 Agenda --------------------------
+
+
+PRIMARY KEY 
+COMPOSITE PRIMIARY KEY
+UNIQUE KEY
+FOREIGN KEY CONSTRAINT
+
+------PRIMARY KEY -----
+CREATE TABLE student(
+id int primary key
+first_name varchar(20) not null,
+last_name varchar(20) not null,
+age int,
+course_enrolled varchar(20) not null default 'Data analystic,
+course_fee int not null
+);
+
+-------constraint primary key -------------
+
+CREATE TABLE Sales_rep(
+rep_firstname varchar(20) not null,
+rep_lastname varchar(20) not null,
+salary int 
+primary key (rep_firstname, rep_lastname)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

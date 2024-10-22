@@ -1,0 +1,33 @@
+SELECT * FROM employee;
+
+INSERT INTO employee (first_name, mid_name, last_name, age, salary, location)
+VALUES 
+('RAHUL', 'KUMAR', 'SHARMA', 28, 20000, 'Mumbai'),
+('AMIT', 'RAVI', 'VERMA', 30, 25000, 'Delhi'),
+('PRIYA', 'SUNIL', 'PATEL', 26, 18000, 'Ahmedabad'),
+('ANITA', 'KUMARI', 'GUPTA', 27, 21000, 'Kolkata'),
+('RAJESH', 'RAM', 'YADAV', 24, 17000, 'Chennai'),
+('KARAN', 'SINGH', 'RATHORE', 32, 28000, 'Bangalore'),
+('NEHA', 'ANIL', 'AGARWAL', 23, 16000, 'Pune'),
+('SUMIT', 'DEV', 'PANDEY', 29, 23000, 'Hyderabad'),
+('NISHA', 'ARUN', 'JAIN', 31, 26000, 'Jaipur'),
+('VIVEK', 'RAJESH', 'THAKUR', 25, 19000, 'Surat'),
+('SUNIL', 'KRISHNA', 'DUBEY', 33, 30000, 'Mumbai'),
+('ROHIT', 'NARESH', 'SAXENA', 21, 14000, 'Delhi'),
+('POOJA', 'MANOJ', 'SINGH', 27, 22000, 'Ahmedabad'),
+('RAVI', 'SHIV', 'DESAI', 34, 32000, 'Kolkata'),
+('DEEPAK', 'RAJU', 'SEN', 28, 20000, 'Chennai'),
+('MONIKA', 'SANJAY', 'MEHTA', 26, 19000, 'Bangalore'),
+('GAURAV', 'MOHAN', 'KUMAR', 22, 15000, 'Pune'),
+('ANJALI', 'ROHIT', 'SHUKLA', 30, 25000, 'Hyderabad'),
+('SNEHA', 'RAMESH', 'TRIPATHI', 24, 17000, 'Jaipur'),
+('VIKAS', 'SUMAN', 'TALREJA', 35, 34000, 'Surat'),
+('AKASH', 'MAHESH', 'SHAH', 29, 23000, 'Mumbai'),
+('SUSHMA', 'LALIT', 'GOYAL', 32, 29000, 'Delhi'),
+('DHRUV', 'NITIN', 'MATHUR', 23, 16000, 'Ahmedabad'),
+('KRITI', 'AMAR', 'CHAWLA', 27, 22000, 'Kolkata'),
+('SHIVANI', 'VIJAY', 'MALIK', 26, 20000, 'Chennai'),
+('ANKIT', 'MANISH', 'CHAUHAN', 28, 24000, 'Bangalore'),
+('SHILPA', 'AJAY', 'JOSHI', 31, 27000, 'Pune'),
+('VINAY', 'HARSH', 'KAPOOR', 25, 18000, 'Hyderabad'),
+('TARUN', 'RAHUL', 'KHANNA', 34, 33000, 'Jaipur');

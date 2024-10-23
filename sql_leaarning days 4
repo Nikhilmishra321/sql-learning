@@ -5,3 +5,62 @@ Agenda
 2. CHECK CONSTRAINT
 
 3. DDL COMMAND   -Create  Alter drop Truncate
+
+
+
+CREATE table department(
+dept_name varchar(30) primary key,
+dept_head varchar(30)
+);
+
+select * from department
+
+select * from employee
+
+drop table employee
+
+INSERT into  department (dept_name , dept_head) VALUES ('IT','Ravi karan'),('ITI' , 'SHYAM SUNDAR'),('HR','MANJEET SHAH');
+
+
+
+
+CREATE TABLE employee (
+    id INT PRIMARY KEY,
+    f_nm VARCHAR(20) NOT NULL,
+    l_nm VARCHAR(20) NOT NULL,
+    age INT,
+    location VARCHAR(20) DEFAULT 'Surat',
+    dept VARCHAR(20),
+    CONSTRAINT fk_department FOREIGN KEY (dept) REFERENCES department(dept_name)
+);
+
+
+INSERT INTO employee (id, f_nm, l_nm, age, dept)
+VALUES 
+(1, 'John', 'Doe', 30, 'HR'),
+(2, 'Emma', 'Smith', 25, 'ITI'),
+(3, 'Robert', 'Brown', 35, 'IT'),
+(4, 'Sophia', 'Davis', 28, 'ITI'),
+(5, 'Liam', 'Johnson', 32, 'HR');
+
+
+CREATE table school(
+id INT PRIMARY KEY,
+Name varchar(20),
+SchoolName varchar default 'learner',
+age int check(age>=10)
+)
+
+
+INSERT into school(id ,name, age) values (101,'shyam', 24);
+
+
+/* DDL STAND FOR DATA DEFINITION LANGUAGE  CREATE  , ALTER , DROP , TRUNCATE*/
+
+drop table school
+
+truncate table school
+
+alter table student add column location varchar (30) not null default 'cheenai'
+
+alter table student drop column location

@@ -7,3 +7,130 @@ AGENDA
    -ORDER BY
    -LIMIT
    -AGGREGATE FUNCTION 
+
+
+CREATE TABLE employee (
+    id serial PRIMARY KEY,
+    f_nm VARCHAR(20) NOT NULL,
+    l_nm VARCHAR(20) NOT NULL,
+    age INT,
+    location VARCHAR(20) DEFAULT 'Surat',
+    dept VARCHAR(20),
+    salary real not null
+);
+
+select * from employee
+
+
+INSERT INTO employee ( f_nm, l_nm, age, dept,salary)
+VALUES 
+( 'John', 'Doe', 30, 'HR',32000.00),
+( 'Emma', 'Smith', 25, 'ITI',35000.0),
+( 'Robert', 'Brown', 35, 'IT',23000)
+(4, 'Sophia', 'Davis', 28, 'ITI',55000),
+(5, 'Liam', 'Johnson', 32, 'HR',60000);
+
+
+INSERT INTO employee (f_nm, l_nm, age, location, dept, salary)
+VALUES
+-- 1st row
+('Rahul', 'Sharma', 28, 'Mumbai', 'HR', 45000.00),
+-- 2nd row
+('Sonia', 'Verma', 32, 'Delhi', 'Finance', 56000.50),
+-- 3rd row
+('Amit', 'Singh', 25, 'Surat', 'IT', 40000.00),
+-- 4th row
+('Priya', 'Nair', 29, 'Kolkata', 'Marketing', 48000.75),
+-- 5th row
+('Vivek', 'Patel', 30, 'Surat', 'Sales', 52000.00),
+-- 6th row
+('Arjun', 'Kumar', 26, 'Chennai', 'HR', 41000.00),
+-- 7th row
+('Neha', 'Gupta', 34, 'Pune', 'Finance', 60000.00),
+-- 8th row
+('Kiran', 'Rao', 31, 'Bangalore', 'IT', 55000.50),
+-- 9th row
+('Anjali', 'Desai', 27, 'Surat', 'Marketing', 46000.00),
+-- 10th row
+('Deepak', 'Sharma', 28, 'Hyderabad', 'Sales', 49000.25),
+-- 11th row
+('Meera', 'Khan', 35, 'Ahmedabad', 'HR', 62000.00),
+-- 12th row
+('Raj', 'Mehta', 30, 'Chennai', 'Finance', 58000.00),
+-- 13th row
+('Nisha', 'Kapoor', 29, 'Pune', 'IT', 51000.00),
+-- 14th row
+('Manoj', 'Agarwal', 33, 'Delhi', 'Marketing', 53000.50),
+-- 15th row
+('Suman', 'Reddy', 31, 'Hyderabad', 'Sales', 47000.00),
+-- 16th row
+('Pooja', 'Shah', 27, 'Mumbai', 'HR', 45000.75),
+-- 17th row
+('Vikas', 'Yadav', 36, 'Kolkata', 'Finance', 67000.00),
+-- 18th row
+('Ritu', 'Malhotra', 28, 'Surat', 'IT', 52000.00),
+-- 19th row
+('Karan', 'Bose', 26, 'Bangalore', 'Marketing', 42000.00),
+-- 20th row
+('Simran', 'Roy', 32, 'Ahmedabad', 'Sales', 56000.50);
+
+
+
+
+
+-------------------------------
+
+/*DISTINCT - fetch the unique value or count the  unique value*/
+
+select distinct location from employee
+
+select dept from employee
+select count (distinct dept) from employee
+
+select age, salary from employee order by age ,salary
+
+------limit  to put a limit on the  number of record fatched 
+
+select * from employee limit 3
+select * from employee order by  salary DESC limit 3
+
+select * from employee order by age DESC limit 3
+
+
+
+
+
+-------------------------------------
+
+/*Write a query to select distinct combinations of employee location and dept, and order the results by dept in descending order.*/
+
+select  location , dept fROM employee order by dept DESC
+
+/*Write a query to select all employees, ordered first by dept in ascending order, and then by salary in descending order.*/
+
+select * from employee  order by dept , salary DESC 
+
+/* Write a query to select the top 5 employees with the highest salary, ordered by their age in ascending order in case of ties.*/
+
+Select f_nm , l_nm ,salary,  age from employee order by salary DESC  , age ASC limit 5
+
+/* Write a query to skip the first 5 highest-paid employees and retrieve the next 3 employees, ordered by salary in descending order.*/
+
+select * from employee order by salary DESC OFFSET 5 limit 5 
+
+
+
+     -------Hard question ----------------
+
+/* Write a query to fetch employees in groups of 3, starting from the 7th row (i.e., paginated results), and order by age in descending order.*
+
+
+
+
+
+
+
+
+
+
+

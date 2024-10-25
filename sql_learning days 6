@@ -1,1 +1,92 @@
+-----AGENDA ---------------
+
+ --CRUD OPERATION
+ --Aggregate Function
+--Group by clause
+--having clause
+
+/* CRUD OPERATION - Create/Insert , Retrieve /Select ,Update/Modify , Delete*/
+
+/*DDL , DML , DQL 
+
+DDL - Data Definition language -create , Alter , Drop , truncate
+
+DML - Data Manipulation laguage - insert , update, delete
+
+DQL - Data query language - */
+
+create table employees (
+id serial primary key,
+name varchar(20) not null,
+dept varchar(20) not null ,
+date_of_joining timestamp not null default current_timestamp,
+status varchar(20) default 'Active',
+salary real not null,
+last_update timestamp default now() );
+
+
+insert into employees  (name, dept ,salary) values 
+('Ravi Kiran' , 'HR', 22000.00),
+('Shyam Prasad' , 'IT',33000.00),
+('Rahul' , 'ITI', 235000.00),
+('Bandhu' , 'HR', 32000.00),
+('RAMIT','IT',13000.00);
+
+INSERT INTO employees (name, dept, salary) VALUES
+('Alice Johnson', 'Finance', 55000),
+('Bob Smith', 'IT', 65000),
+('Charlie Brown', 'HR', 50000),
+('David Wilson', 'Marketing', 60000),
+('Emma Taylor', 'Sales', 58000),
+('Frank Moore', 'Finance', 54000),
+('Grace Lee', 'IT', 72000),
+('Henry White', 'HR', 51000),
+('Ivy Green', 'Marketing', 62000),
+('Jack Black', 'Sales', 57000);
+
+
+
+SELECT * FROM employees
+
+/* Aggregations/ aggregate functions - SUM , AVG, MIN, MAX, COUNT , DISTINCT COUNT*/
+
+Select count(*) as number_of_employees from employees
+select  count(distinct dept) as department from employees
+
+select  count(name ) from employees where salary>22000 and salary<33000;
+select count(name) from employees where salary between 22000 and 33000
+
+
+select sum(salary) as total_salary from employees
+select avg(salary) as avg_salary from employees
+select min(salary) as min_salary from employees
+select max(salary) as max_salary from employees
+
+select name, salary from employees order by  salary limit 1
+
+alter table employees  add column  location varchar(20) not null default 'Hydrabadh'
+
+/* DML UPDATE*/
+
+update employees set location ='SURAT' WHERE name  IN('Ravi Kiran' , 'Shyam Prasad') 
+update employees set location ='Chennai' WHERE name =  'RAMIT'
+
+/* DML  DELETE*/
+
+DELETE  from employees where name='RAMIT'
+
+select * from employees order by id 
+
+
+/* GROUP BY*/
+
+select location, count(*) from employees group by location
+
+select location , dept  ,count(*) from employees group by location , dept having   
+
+select location , dept , count(*) from employees where salary>22000 group by location, dept
+
+select location , count(*)  from employees where location ='Hydrabadh' group by location
+
+
 

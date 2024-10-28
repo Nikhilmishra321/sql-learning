@@ -1,1 +1,29 @@
+select * from employee
+
+select f_nm , l_nm from employee where salary = (select MAX(salary) from employee)
+
+select id, f_nm , l_nm from employee where id IN (select  )
+
+
+select * from employee 
+where salary < (select avg(salary) from employee )
+
+-- Find employee who earn the highest salary in each department --
+
+select dept , min(salary) from employee
+group by dept order by dept
+
+
+
+select * from employee
+where(dept,salary) in (select dept , max(salary) from employee
+group by dept order by dept
+)
+
+------single colum multiple row subquery
+
+/*QUESTION :Find department who do not have any employee--
+
+
+
 

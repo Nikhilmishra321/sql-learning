@@ -22,7 +22,18 @@ group by dept order by dept
 
 ------single colum multiple row subquery
 
-/*QUESTION :Find department who do not have any employee--
+
+
+
+/*QUESTION :Find department who do not have any employee--*/
+
+SELECT MAX(salary) from employee where   salary  < (select  MAX(salary) from employee)
+
+--find the detail of customers , whose payment amount is more than average of total amount paid by all customer
+
+select * 
+from employee
+where salary > (select avg(salary) from employee) order by salary
 
 
 

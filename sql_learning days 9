@@ -1,1 +1,16 @@
+--DML COMMADN  GRANT , REVOKE
+
+create user ps1 password '111'
+select * from employee;
+update employee set status ='inactive' where name ='akhil'
+delete from employee where status ='Inactive'
+
+grant select on employee to ps1
+grant update on employee to ps1
+grant delete on employee to ps1
+grant insert on employee to ps1
+
+revoke delete on employee from ps1
+revoke update on employee from ps1
+revoke select on employee from ps1
 

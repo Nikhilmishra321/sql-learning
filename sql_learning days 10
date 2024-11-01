@@ -1,1 +1,29 @@
+-------AGENDA ----
 
+TCL COMMAND - BEGIN , ROLLBACK , COMMIT
+CONDITATIONAL STATEMENT - CASE
+POSTERSQL  TABLEU CONNETION 
+
+--TCL COMMAND 
+
+SELECT * FROM EMPLOYEE where f_nm ='Priya';
+
+DELETE FROM EMPLOYEE WHERE f_nm = 'Priya';
+
+begin
+
+rollback;
+commit;
+
+
+---CASE STATEMENT-----
+
+SELECT f_nm , salary ,
+
+CASE 
+   WHEN salary > 400000  THEN  'salary is more than 40 thousand'
+   WHEN salary <400000   THEN 'salary is less than 40 thousand'
+   WHEN salary =400000   THEN 'salary is equal than 40 thousand'
+   ELSE 'NO stock'
+END 
+FROM employee

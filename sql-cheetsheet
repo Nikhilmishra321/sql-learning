@@ -72,3 +72,5 @@ GRANT SELECT, INSERT ON employees TO 'username';
 REVOKE INSERT ON employees FROM 'username';
 
 select * from employee;
+
+DDL COMMAND : SELECT , DROP, TRUNCATE , 

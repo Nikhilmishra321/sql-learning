@@ -58,7 +58,8 @@ sql
 Copy code
 SELECT name, age
 FROM employees
-WHERE age > 25;
+WHERE age > 25
+order by asc;
 DCL - Data Control Language: DCL commands are used to control access to the database, such as giving or taking away user privileges.
 
 GRANT: Gives a user permission to perform certain actions on the database.

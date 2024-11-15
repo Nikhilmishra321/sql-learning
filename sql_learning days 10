@@ -27,3 +27,9 @@ CASE
    ELSE 'NO stock'
 END 
 FROM employee
+
+SELECT l_nm , amount ,
+
+CASE 
+  WHEN salary > 20000 THEN 'salary is more than 40 thousand'
+  WHEN salary > 25000 THEN 'salary is more than 30 thousand'

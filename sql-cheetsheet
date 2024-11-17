@@ -51,6 +51,9 @@ DELETE FROM employees
 WHERE id = 1;
 DQL - Data Query Language: DQL is used for querying or retrieving data from the database. The main command under DQL is:
 
+SELECT * FROM EMPLOYEE
+
+
 SELECT: Used to query or fetch data from a table based on conditions.
 Example:
 

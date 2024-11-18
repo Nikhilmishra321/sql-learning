@@ -36,6 +36,7 @@ INSERT: Used to add new records to a table.
 UPDATE: Used to modify existing records in a table.
 DELETE: Used to remove records from a table.
 select * from employee;
+select * from department
 Example:
 
 sql

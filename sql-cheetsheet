@@ -44,6 +44,8 @@ Copy code
 INSERT INTO employees (id, name, age)
 VALUES (1, 'John Doe', 28);
 
+select * from employees
+
 UPDATE employees
 SET age = 30
 WHERE id = 1;

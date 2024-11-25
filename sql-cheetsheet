@@ -22,6 +22,8 @@ ALTER: Used to modify an existing table, such as adding or removing columns.
 DROP: Used to delete a table or database.
 TRUNCATE: Used to remove all records from a table (but not the table structure).
 
+select * from employee
+
 
 select * from employee
 Example:

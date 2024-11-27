@@ -12,6 +12,8 @@ Flexibility: It provides a variety of functionalities like data insertion, updat
 
 Integration: SQL can be integrated with different programming languages (like Python, Java, etc.) and systems to build data-driven applications.
 
+select * from employee
+
 Types of SQL Operations:
 SQL is divided into various categories based on the operations it performs. These categories are:
 

@@ -16,6 +16,8 @@ select * from employee
 
 select * from  employee
 
+select * from employee
+
 Types of SQL Operations:
 SQL is divided into various categories based on the operations it performs. These categories are:
 

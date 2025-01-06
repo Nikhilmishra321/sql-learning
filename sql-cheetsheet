@@ -21,6 +21,7 @@ select * from employee
 select *from employee
 
 select * from employee
+select * from employee where id =1
 
 Types of SQL Operations:
 SQL is divided into various categories based on the operations it performs. These categories are:

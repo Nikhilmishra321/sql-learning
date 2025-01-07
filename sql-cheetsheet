@@ -21,6 +21,8 @@ select * from employee
 select *from employee
 
 select * from employee
+
+select * from employee
 select * from employee where id =1
 
 Types of SQL Operations:
